@@ -1,10 +1,15 @@
 package bot;
 import java.util.Scanner;
+import static bot.BotEngine.*;
+import static java.lang.Thread.sleep;
 
 public class SimpleBot {
-    public static void main(String[] args) {
-        System.out.println("Hello! My name is Quantro.");
+    public static void main(String[] args) throws InterruptedException {
+        loadingAnimation(5, 2000);
+        System.out.println("Hello! My name is Unity.");
+        loadingAnimation(5, 2000);
         System.out.println("I was created in 2020.");
+        loadingAnimation(5, 2000);
         System.out.println("Please, remind me your name.");
 
         Scanner scanner = new Scanner(System.in);
@@ -20,5 +25,12 @@ public class SimpleBot {
         int age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % 105;
 
         System.out.println("Your age is " + age + "; that's a good time to start programming!");
+        System.out.println("Now I will prove to you that I can count to any number you want.");
+
+        int num = scanner.nextInt();
+        for (int i = 0; i <= num; i++) {
+            System.out.println(i + "!");
+        }
+        System.out.println("Completed, have a nice day!");
     }
 }
